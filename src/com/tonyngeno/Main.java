@@ -15,11 +15,16 @@ public class Main {
         // create list of subjects
         ArrayList<Subject> subjects = new ArrayList<>();
 
+        // create list of marks
+
+        ArrayList<Marks> marks = new ArrayList<>();
+
 
             Scanner scanner = new Scanner(System.in);
             System.out.println(" Teacher or Student? ");
             System.out.println("1.Choose Student");
             System.out.println("2.Choose Teacher");
+
             int x = scanner.nextInt();
 
             if (x == 1){
@@ -47,7 +52,7 @@ public class Main {
                     //ask for no of subjects student takes
                     System.out.println("Enter No of Subjects Taken:");
                     int subjectCount = scanner.nextInt();
-                    ArrayList<Marks> marks = new ArrayList<>();
+
 
                     //for loop to check on number of subjects stated
                     for (int k=1; k <= subjectCount; k++){
@@ -55,11 +60,11 @@ public class Main {
                         scanner.nextLine();
 
                         //ask for subject name
-                        System.out.println("Please enter Subject " +k + ":");
+                        System.out.println("Please enter Subject " +k + " "+"Name"+":");
                         subject.setName(scanner.nextLine());
 
                         //ask for subject score
-                        System.out.println("Please enter Score");
+                        System.out.println("Please enter Subject Score");
                         mark.setScore(scanner.nextInt());
                         mark.setSubject(subject);
 
@@ -69,6 +74,13 @@ public class Main {
 
                     }
                 }
+                System.out.println("--Student Details---");
+                System.out.println(Arrays.toString(students.toArray()));
+                System.out.println("--Marks Details---");
+                System.out.println(Arrays.toString(marks.toArray()));
+
+
+
 
 
             } else if(x == 2){
@@ -110,10 +122,13 @@ public class Main {
                     //add subject to subjects array list
                     subjects.add(subject);
 
+                    scanner.nextLine();
+
 
                 }
 
-                System.out.println();
+                System.out.println("--Teachers Details---");
+                System.out.println(Arrays.toString(teachers.toArray()));
 
 
             }

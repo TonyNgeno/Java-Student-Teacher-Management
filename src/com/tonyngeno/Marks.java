@@ -32,4 +32,9 @@ public class Marks {
     public void setSubject(Subject subject) {
         this.subject = subject;
     }
+
+    @Override
+    public String toString() {
+        return  "Subject Name:" +this.getSubject() + " " + "Subject Score:" + this.getScore() ;
+    }
 }

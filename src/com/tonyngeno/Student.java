@@ -7,6 +7,7 @@ public class Student {
     ArrayList<Subject> subjects = new ArrayList<>();
     private String name;
     private String studentRegNo;
+    private final Marks marks = new Marks();
     int result;
 
 
@@ -36,8 +37,9 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Name: " + this.name + "," + "StudentId: " + this.studentRegNo;
+        return  "StudentName:" +this.getName() + " " + "Student Reg No:" + this.getStudentRegNo() ;
     }
+
 
     public ArrayList<Subject> getSubjects() {
         return subjects;
@@ -46,5 +48,6 @@ public class Student {
     public void setSubjects(ArrayList<Subject> subjects) {
         this.subjects = subjects;
     }
+
 
 }

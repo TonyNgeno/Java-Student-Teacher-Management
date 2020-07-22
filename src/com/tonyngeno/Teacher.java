@@ -28,4 +28,8 @@ public class Teacher {
     public void setSubject(Subject subject) {
         this.subject = subject;
     }
+    @Override
+    public String toString() {
+        return   "Name:" + this.getName() + " " + "Teacher Reg No:"+ this.getTeacherRegNo() + " " + "Subject: " + this.getSubject();
+    }
 }
